@@ -1,6 +1,7 @@
 .idea
 *.pyc
 */__pycache__/*
-*/data/*
+*/data/*data
+*/data/original/*
 */experiments/*
 
