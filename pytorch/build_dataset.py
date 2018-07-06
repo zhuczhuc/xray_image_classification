@@ -25,6 +25,8 @@ def split_data(original_dir, train_dir, split=0.8):
     cnt = 0
     category_dict = {}
     for c in os.listdir(original_dir):
+        if c == '.gitkeep':
+            continue
         category_dict[cnt] = c
         cnt += 1
     files_dict = {}
@@ -77,6 +79,6 @@ if __name__ == '__main__':
             print("Processing {} data, {} category, saving preprocessed data to {}".
                   format(split, category_dict[ca_k], output_dir_split))
             for fname in tqdm(files):
-                resize_and_save(fname, output_dir_split, category_dict[ca_k])
+                resize_and_save(fname, output_dir_split, ca_k)
 
 
