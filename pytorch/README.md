@@ -23,5 +23,5 @@ python train.py --data_dir data/64x64_SIGNS --model_dir experiments/base_model
 ```
 4. 预测单幅图像：
 ```
-python --datafile data/original/visible/img.png
+python evaluate.py --datafile data/original/visible/img.png
 ```
